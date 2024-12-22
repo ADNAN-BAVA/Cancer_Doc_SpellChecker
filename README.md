@@ -10,150 +10,128 @@ This repository contains an advanced spelling correction system that detects and
 
 ---
 
-## Project Overview
+## 🚀 Project Overview
 
-### **System Features**
+### ✨ **System Features**
 
-1. **Error Detection**
-   - **Non-word Errors**:
-     - Detects words not present in the corpus using edit distance algorithms.
-     - Provides ranked suggestions based on similarity to valid words.
-   - **Real-word Errors**:
-     - Identifies words used out of context with the help of bigram models and DistilBERT.
+1. **Error Detection**  
+   🛠️ **Non-word Errors**:  
+   - Detects words not present in the corpus using edit distance algorithms.  
+   - Provides ranked suggestions based on similarity to valid words.  
 
-2. **Error Correction**
-   - Generates ranked correction suggestions using:
-     - Edit Distance for spelling similarity.
-     - Probabilistic models for context-aware ranking.
+   🔍 **Real-word Errors**:  
+   - Identifies words used out of context with the help of bigram models and DistilBERT.  
 
-3. **Graphical User Interface (GUI)**
-   - Interactive error highlighting with:
-     - **Red** for non-word errors.
-     - **Blue** for real-word errors.
-     - **Green** for corrected words (underlined).
-   - Features include real-time corrections, word search, and alphabetical sorting.
+2. **Error Correction**  
+   - 🧠 Generates ranked correction suggestions using:  
+     - 🖍️ Edit Distance for spelling similarity.  
+     - 📊 Probabilistic models for context-aware ranking.  
 
-4. **Performance Metrics**
-   - Fine-tuned DistilBERT achieved a validation accuracy of **99.88%**.
-   - Optimized for real-time feedback with minimal latency.
+3. **Graphical User Interface (GUI)**  
+   - 🎨 Interactive error highlighting with:  
+     - **Red** for non-word errors.  
+     - **Blue** for real-word errors.  
+     - **Green** for corrected words (underlined).  
+   - 💡 Features include real-time corrections, word search, and alphabetical sorting.  
 
----
-
-## Technologies and Libraries
-
-### **Algorithms**
-- **Edit Distance**:
-  - Levenshtein and Damerau-Levenshtein distance for error detection and correction.
-- **Bigram Analysis**:
-  - Context-aware word pairing probabilities.
-
-### **Machine Learning**
-- **DistilBERT**:
-  - Fine-tuned transformer model for real-word error detection.
-
-### **Python Libraries**
-- **PyTorch**: Model training and optimization.
-- **Hugging Face Transformers**: Pretrained models and tokenizers.
-- **NLTK**: Bigram implementation and corpus processing.
-- **Tkinter & TtkBootstrap**: GUI development and styling.
-- **Regex**: Text preprocessing.
-- **Collections (Counter)**: Word frequency analysis.
+4. **Performance Metrics**  
+   - ⚡ Fine-tuned DistilBERT achieved a validation accuracy of **99.88%**.  
+   - ⏱️ Optimized for real-time feedback with minimal latency.  
 
 ---
 
-## Installation
+## 🛠️ Technologies and Libraries
 
-### **Prerequisites**
-Ensure Python 3.8+ is installed on your system. Install dependencies using pip.
+### **Algorithms**  
+- 📏 **Edit Distance**:  
+  Levenshtein and Damerau-Levenshtein distance for error detection and correction.  
+- 🔗 **Bigram Analysis**:  
+  Context-aware word pairing probabilities.  
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/spell-checker.git
-   cd spell-checker
-   ```
-2. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### **Machine Learning**  
+- 🤖 **DistilBERT**:  
+  Fine-tuned transformer model for real-word error detection.  
 
-3. Launch the application:
-   ```bash
-   python app.py
-   ```
-
----
-
-## Usage
-
-### **Graphical User Interface**
-
-1. **Input Area**:
-   - Paste or type text into the editor.
-   - Word limit: **500 words**.
-2. **Error Detection**:
-   - Errors flagged in real-time:
-     - **Red**: Non-word errors.
-     - **Blue**: Real-word errors.
-   - Corrected words are shown in **green** and underlined.
-3. **Suggestions**:
-   - Right-click on flagged words for correction suggestions.
-   - Select a suggestion or ignore the flagged word.
-
-### **Word Management**
-- Search words in the corpus using the search box.
-- Alphabetically sort words to navigate through the corpus.
+### **Python Libraries**  
+- 🔥 **PyTorch**: Model training and optimization.  
+- 🦗 **Hugging Face Transformers**: Pretrained models and tokenizers.  
+- 📖 **NLTK**: Bigram implementation and corpus processing.  
+- 🖥️ **Tkinter & TtkBootstrap**: GUI development and styling.  
+- ⚙️ **Regex**: Text preprocessing.  
+- 📊 **Collections (Counter)**: Word frequency analysis.  
 
 ---
 
-## System Design
+## ✍️ Usage
 
-### **Workflow**
+### **Graphical User Interface**  
 
-1. **Corpus Preprocessing**:
-   - Clean text by removing special characters.
-   - Tokenize into words and calculate word frequencies.
-   - Store frequencies for ranking correction candidates.
+1. **Input Area**:  
+   - Paste or type text into the editor.  
+   - Word limit: **500 words**.  
 
-2. **Error Detection**:
-   - Non-word Errors:
-     - Use Levenshtein distance to identify misspellings.
-   - Real-word Errors:
-     - Employ bigram analysis to detect contextual anomalies.
+2. **Error Detection**:  
+   - Errors flagged in real-time:  
+     - **Red**: Non-word errors.  
+     - **Blue**: Real-word errors.  
+   - Corrected words are shown in **green** and underlined.  
 
-3. **Suggestions**:
-   - Rank corrections by:
-     - Edit distance similarity.
-     - Probabilistic context-based ranking.
+3. **Suggestions**:  
+   - Right-click on flagged words for correction suggestions.  
+   - Select a suggestion or ignore the flagged word.  
 
-4. **GUI Integration**:
-   - Features real-time highlighting, user interactions, and corpus management tools.
-
-### **Data**
-- The system is fine-tuned on a **medical corpus** for handling domain-specific terms such as cancer-related vocabulary.
+### **Word Management**  
+- 🔍 Search words in the corpus using the search box.  
+- 🐂️ Alphabetically sort words to navigate through the corpus.  
 
 ---
 
-## Results
+## 🛠️ System Design
 
-### **Strengths**
-- High accuracy in domain-specific text correction.
-- Efficient handling of both simple and complex spelling errors.
-- User-friendly interface with intuitive controls.
+### **Workflow**  
 
-### **Limitations**
-- Does not support grammar corrections.
-- Scalability challenges with larger corpora.
+1. 🧹 **Corpus Preprocessing**:  
+   - Clean text by removing special characters.  
+   - Tokenize into words and calculate word frequencies.  
+   - Store frequencies for ranking correction candidates.  
+
+2. 🔎 **Error Detection**:  
+   - 🛠️ Non-word Errors:  
+     - Use Levenshtein distance to identify misspellings.  
+   - 🔗 Real-word Errors:  
+     - Employ bigram analysis to detect contextual anomalies.  
+
+3. ✨ **Suggestions**:  
+   - Rank corrections by:  
+     - Edit distance similarity.  
+     - Probabilistic context-based ranking.  
+
+4. 🎨 **GUI Integration**:  
+   - Features real-time highlighting, user interactions, and corpus management tools.  
 
 ---
 
-## Future Enhancements
+## 📊 Results
 
-1. Expand to include grammar correction.
-2. Enable batch text processing.
-3. Optimize for longer corpora and complex datasets.
+### **Strengths**  
+- High accuracy in domain-specific text correction.  
+- Efficient handling of both simple and complex spelling errors.  
+- User-friendly interface with intuitive controls.  
+
+### **Limitations**  
+- Does not support grammar corrections.  
+- Scalability challenges with larger corpora.  
 
 ---
 
-## References
+## 🚀 Future Enhancements  
+
+1. Expand to include grammar correction.  
+2. Enable batch text processing.  
+3. Optimize for longer corpora and complex datasets.  
+
+---
+
+## 📚 References  
 
 Refer to the [report](./NLP_ASSIGNMENT_REPORT_EDITED.pdf) for detailed citations and explanations of algorithms and methodologies used.
